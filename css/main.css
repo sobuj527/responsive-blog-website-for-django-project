@@ -1,0 +1,246 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+   outline: 0!important;
+}
+* div::before, * div::after {
+   content: '';
+   clear: both;
+   display: inherit
+}
+body {
+   background-color: #fff4f4;
+   font-family: Verdana, Tahoma, Georgia, Arial;
+   color: #555;
+   letter-spacing: .5px;
+   line-height: 1.7;
+}
+body a {text-decoration: none!important}
+a {text-decoration: none; color: teal}
+a.active {
+   color: darkorange!important;
+   border-bottom: 2px solid #fff
+}
+h1, h2, h3, h4, h5, h6, p {margin: 10px 0}
+.headerSection {
+   background: teal;
+   display: flex;
+   width: 100%;
+   padding: 5px 5%;
+   font-size: 18px;
+}
+.headerSection a {
+   color: #fff;
+   text-decoration: none;
+   padding: 5px;
+   margin: 0 2px;
+}
+.headerLeft {
+   width: 50%;
+   display: flex;
+   align-items: center;
+}
+.headerLeft img {
+   width: 300px;
+   margin-right: 20px;
+   margin-left: -6px;
+}
+.headerRight {
+   width: 50%;
+   display: flex;
+   justify-content: right;
+   align-items: center;
+}
+.mainSection {
+   margin: 30px auto
+}
+.articles, .aboutArea, .loginArea, .registerArea  {
+   float: left;
+}
+.articleWrapper {
+   border: 1px solid #ddd;
+   margin-bottom: 12px;
+   padding: 12px;
+   border-radius: 8px;
+   display: inline-flex;
+   position: sticky;
+   width: 100%;
+}
+.article {
+   float: left;
+   text-align: justify;
+}
+.authorPic {
+   margin-right: 10px;
+   width: 50px;
+   height: 50px
+}
+.authorPic img {
+   height: inherit
+}
+.articleInfo span {
+   color: darkorange
+}
+.articleContent img {
+   width: 210px;
+   float: left;
+   margin-right: 15px;
+   padding: 4px;
+   box-shadow: 0 0 5px #ccc;
+}
+.readMore {
+   border: 1px solid darkorange;
+   padding: 4px 15px;
+   margin-top: 20px;
+   display: inline-block;
+   border-radius: 5px;
+   transition: .3s
+}
+.readMore:hover {
+   color: darkorange;
+   border-color: teal
+}
+.pagination {
+   display: flex!important;
+   justify-content: center;
+   margin-top: 20px;
+}
+.pagination a {
+   color: #222;
+   padding: 4px 15px;
+   border: 1px solid #ccc;
+   margin: 0 2px;
+   border-radius: 5px;
+}
+.pagination a.current {
+   border-color: darkorange;
+   color: limegreen
+}
+.pagination a:hover {
+   background: #fff
+}
+
+/* Other Pages Styles for mainArea */
+.aboutArea, .loginArea, .registerArea {
+   padding: 30px;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+}
+.aboutArea h1, .loginArea h1, .registerArea h1 {
+   padding-bottom: 15px
+}
+
+/* Form Styles */
+form#Search {
+   display: flex
+}
+form label, form input, select, textarea {
+   display: inline-block;
+   width: 100%;
+}
+form label {
+   margin: 15px 0 2px;
+   padding: 5px
+}
+#login input, #register input, select, textarea {
+   padding: 10px 12px;
+   border: 1px solid #ccc;
+   border-radius: 50px;
+   color: #717171;
+}
+#Search {
+   border: 1px solid #ccc;
+   margin-bottom: 25px;
+   overflow: hidden;
+   border-radius: 5px;
+}
+#searchTxt {
+   padding: 8px;
+   color: #717171;
+   border: 0;
+   min-width: 100px
+}
+.rightSidebar {
+   position: sticky;
+   top: 15px;
+   float: left;
+   padding-top: 10px;
+}
+.rightSidebar h2 {
+   margin-bottom: 20px
+}
+.shortLinks {
+   padding: 12px 8px;
+   border-radius: 8px;
+   border: 1px solid #ddd;
+}
+.rightSidebar a {
+   float: none;
+   display: block;
+   border: 1px solid #ddd;
+   padding: 8px;
+   font-size: 14px;
+}
+.rightSidebar a:not(:last-child) {
+   margin-bottom: -1px
+}
+.rightSidebar a:hover {
+   background: #f2f2ff;
+   color: #222
+}
+
+.footerSection {
+   background-color: teal;
+   width: 100%;
+   padding: 15px 0;
+   display: flex
+}
+
+.footerLeft, .footerRight {
+   width: 50%;
+   text-align: center;
+   color: #fff
+}
+#jump-to-top {
+   position: fixed;
+   bottom: -2em;
+   right: 1em;
+   background: #f7f7f7;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: opacity, bottom, 250ms cubic-bezier(.42,0,.12,1.36);
+   opacity: 0;
+   border: 1px solid #e3e3e3;
+   box-shadow: 1px 1px 8px #ddd;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   width: 50px;
+}
+
+#jump-to-top.show {
+   opacity: 1;
+   bottom: 1em
+}
+#jump-to-top .fa-arrow-up {
+   font-size: 22px;
+   color: teal;
+   transition: .5s
+}
+#jump-to-top:hover .fa-arrow-up {
+   color: darkorange
+}
+@media (max-width: 768px) {
+   .headerSection a img {
+      width: 
+         220px;
+   }
+   .footerSection {
+      display: block;
+   }
+   .footerLeft,.footerRight {
+      width: 100%
+   }
+   
+}
